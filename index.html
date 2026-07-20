@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cafe Menu</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f3eedc;
+    --navy: #1c2a48;
+    --navy-dim: #55617c;
+    --olive: #74804a;
+    --olive-dark: #5b6539;
+    --divider: #d8cca8;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--bg);
+    color: var(--navy);
+    font-family: 'Inter', sans-serif;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrap {
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 48px 24px 80px;
+  }
+
+  /* ---- Hero ---- */
+  header {
+    text-align: center;
+    padding-bottom: 32px;
+    border-bottom: 1px solid var(--divider);
+    margin-bottom: 40px;
+  }
+
+  .logo-mark {
+    width: 130px;
+    height: auto;
+    margin: 0 auto 18px;
+    display: block;
+  }
+
+  .eyebrow {
+    font-size: 12px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--olive-dark);
+    margin-bottom: 10px;
+    font-weight: 600;
+  }
+
+  h1 {
+    font-family: 'Fraunces', serif;
+    font-weight: 700;
+    font-size: clamp(36px, 9vw, 52px);
+    letter-spacing: -0.5px;
+    color: var(--navy);
+  }
+
+  .tagline {
+    margin-top: 10px;
+    color: var(--navy-dim);
+    font-size: 15px;
+  }
+
+  /* ---- Menu sections ---- */
+  section.menu-group {
+    margin-bottom: 44px;
+  }
+
+  .group-title {
+    font-family: 'Fraunces', serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 4px;
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+  }
+
+  .group-title .kurdish {
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--olive-dark);
+    font-family: 'Inter', sans-serif;
+  }
+
+  .group-rule {
+    height: 2px;
+    background: var(--olive);
+    width: 100%;
+    margin-bottom: 16px;
+    opacity: 0.55;
+  }
+
+  .item {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 12px;
+    padding: 10px 0;
+    border-bottom: 1px dashed var(--divider);
+  }
+
+  .item:last-child { border-bottom: none; }
+
+  .item-name {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--navy);
+  }
+
+  .item-kurdish {
+    font-size: 13px;
+    color: var(--olive-dark);
+    margin-top: 1px;
+    direction: rtl;
+  }
+
+  .item-price {
+    font-family: 'Fraunces', serif;
+    font-weight: 700;
+    font-size: 16px;
+    color: var(--olive-dark);
+    white-space: nowrap;
+  }
+
+  .item-price::after {
+    content: " IQD";
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    color: var(--navy-dim);
+  }
+
+  footer {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 28px;
+    border-top: 1px solid var(--divider);
+    color: var(--navy-dim);
+    font-size: 13px;
+  }
+
+  footer .cafe-name {
+    color: var(--navy);
+    font-family: 'Fraunces', serif;
+    font-weight: 700;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <img class="logo-mark" src="assets/logo.png" alt="AB Cafe logo">
+    <div class="eyebrow">Welcome to</div>
+    <h1>AB Cafe</h1>
+    <p class="tagline">Scan &middot; sip &middot; enjoy</p>
+  </header>
+
+  <!--
+    EDIT ME: This is where all the menu content lives.
+    Copy a whole <section class="menu-group">...</section> block to add a new category.
+    Copy a <div class="item">...</div> block to add a new item within a category.
+  -->
+
+  <section class="menu-group">
+    <div class="group-title">Hot Drinks <span class="kurdish">خواردنەوە گەرمەکان</span></div>
+    <div class="group-rule"></div>
+    <div class="item"><div><div class="item-name">Espresso</div><div class="item-kurdish">ئێسپرێسۆ</div></div><div class="item-price">2,000</div></div>
+    <div class="item"><div><div class="item-name">Double Espresso</div><div class="item-kurdish">دەبڵ ئێسپرێسۆ</div></div><div class="item-price">3,500</div></div>
+    <div class="item"><div><div class="item-name">Americano</div><div class="item-kurdish">ئەمریکانۆ</div></div><div class="item-price">2,500</div></div>
+    <div class="item"><div><div class="item-name">Macchiato</div><div class="item-kurdish">ماکیاتۆ</div></div><div class="item-price">2,000</div></div>
+    <div class="item"><div><div class="item-name">Cappuccino</div><div class="item-kurdish">کاپەچینۆ</div></div><div class="item-price">2,500</div></div>
+    <div class="item"><div><div class="item-name">Latte</div><div class="item-kurdish">لاتێ</div></div><div class="item-price">2,500</div></div>
+    <div class="item"><div><div class="item-name">Spanish Latte</div><div class="item-kurdish">سپانیش لاتێ</div></div><div class="item-price">3,000</div></div>
+    <div class="item"><div><div class="item-name">Caramel Latte</div><div class="item-kurdish">کەرامێل لاتێ</div></div><div class="item-price">3,000</div></div>
+    <div class="item"><div><div class="item-name">Mocha</div><div class="item-kurdish">مۆکا</div></div><div class="item-price">3,000</div></div>
+    <div class="item"><div><div class="item-name">Nuttela</div><div class="item-kurdish">نۆتێلا</div></div><div class="item-price">3,000</div></div>
+    <div class="item"><div><div class="item-name">Chocolate</div><div class="item-kurdish">شۆکۆلاتە</div></div><div class="item-price">3,000</div></div>
+    <div class="item"><div><div class="item-name">Caramel</div><div class="item-kurdish">کەرامێل</div></div><div class="item-price">3,000</div></div>
+    <div class="item"><div><div class="item-name">Nescafe</div><div class="item-kurdish">نیسکافه</div></div><div class="item-price">2,000</div></div>
+    <div class="item"><div><div class="item-name">Kurdish Coffee</div><div class="item-kurdish">قەزوان</div></div><div class="item-price">2,000</div></div>
+    <div class="item"><div><div class="item-name">Cacao</div><div class="item-kurdish">کاکاو</div></div><div class="item-price">2,000</div></div>
+    <div class="item"><div><div class="item-name">Milk</div><div class="item-kurdish">شیر</div></div><div class="item-price">1,000</div></div>
+  </section>
+
+  <section class="menu-group">
+    <div class="group-title">Iced Coffee <span class="kurdish">قاوەی سارد</span></div>
+    <div class="group-rule"></div>
+    <div class="item"><div><div class="item-name">Espresso Tonic</div><div class="item-kurdish">ئێسپرێسۆ تۆنیک</div></div><div class="item-price">3,000</div></div>
+    <div class="item"><div><div class="item-name">Iced Americano</div><div class="item-kurdish">ئەمەریکانۆ سارد</div></div><div class="item-price">2,500</div></div>
+    <div class="item"><div><div class="item-name">Iced Latte</div><div class="item-kurdish">لاتێ سارد</div></div><div class="item-price">3,000</div></div>
+    <div class="item"><div><div class="item-name">Spanish Latte</div><div class="item-kurdish">سپانیش لاتێ</div></div><div class="item-price">3,000</div></div>
+    <div class="item"><div><div class="item-name">Spanish Latte Mix Berry</div><div class="item-kurdish">سپانیش لاتێ میکس بێری</div></div><div class="item-price">5,000</div></div>
+    <div class="item"><div><div class="item-name">Fredo</div><div class="item-kurdish">فرێدۆ</div></div><div class="item-price">3,000</div></div>
+    <div class="item"><div><div class="item-name">Greek Frappe</div><div class="item-kurdish">فراپێی</div></div><div class="item-price">2,500</div></div>
+    <div class="item"><div><div class="item-name">Iced Mocha</div><div class="item-kurdish">مۆکا</div></div><div class="item-price">3,000</div></div>
+    <div class="item"><div><div class="item-name">Matcha Fusion</div><div class="item-kurdish">ماچا</div></div><div class="item-price">5,000</div></div>
+    <div class="item"><div><div class="item-name">Iced Chocolate</div><div class="item-kurdish">شوکولاتەی سارد</div></div><div class="item-price">3,000</div></div>
+    <div class="item"><div><div class="item-name">Iced Caramel</div><div class="item-kurdish">کەرامێلی سارد</div></div><div class="item-price">3,000</div></div>
+    <div class="item"><div><div class="item-name">Iced Nuttela</div><div class="item-kurdish">نوتێلای سارد</div></div><div class="item-price">3,000</div></div>
+  </section>
+
+  <section class="menu-group">
+    <div class="group-title">Milk Shakes <span class="kurdish">میلک شەیک</span></div>
+    <div class="group-rule"></div>
+    <div class="item"><div><div class="item-name">Chocolate</div><div class="item-kurdish">شوکولاته</div></div><div class="item-price">3,500</div></div>
+    <div class="item"><div><div class="item-name">Nuttela</div><div class="item-kurdish">نوتێلا</div></div><div class="item-price">3,500</div></div>
+    <div class="item"><div><div class="item-name">Vanilla</div><div class="item-kurdish">ڤانیلا</div></div><div class="item-price">3,500</div></div>
+    <div class="item"><div><div class="item-name">Oreo</div><div class="item-kurdish">ئۆریۆ</div></div><div class="item-price">3,500</div></div>
+    <div class="item"><div><div class="item-name">Strawberry</div><div class="item-kurdish">شاتوو</div></div><div class="item-price">3,500</div></div>
+  </section>
+
+  <section class="menu-group">
+    <div class="group-title">Fresh <span class="kurdish">فرێش</span></div>
+    <div class="group-rule"></div>
+    <div class="item"><div><div class="item-name">Orange</div><div class="item-kurdish">پرتەقاڵ</div></div><div class="item-price">2,500</div></div>
+    <div class="item"><div><div class="item-name">Lemon</div><div class="item-kurdish">لیمۆ</div></div><div class="item-price">2,500</div></div>
+    <div class="item"><div><div class="item-name">Pomegranate</div><div class="item-kurdish">هەنار</div></div><div class="item-price">3,000</div></div>
+    <div class="item"><div><div class="item-name">Banana</div><div class="item-kurdish">مۆز</div></div><div class="item-price">1,500</div></div>
+    <div class="item"><div><div class="item-name">Lemon + Mint</div><div class="item-kurdish">لیمۆ و نەعنا</div></div><div class="item-price">2,500</div></div>
+  </section>
+
+  <section class="menu-group">
+    <div class="group-title">Mocktails <span class="kurdish">مۆکتێل</span></div>
+    <div class="group-rule"></div>
+    <div class="item"><div><div class="item-name">Blue Island</div><div class="item-kurdish">بلو ئایلەند</div></div><div class="item-price">3,500</div></div>
+    <div class="item"><div><div class="item-name">Mojito</div><div class="item-kurdish">مۆهیتۆ</div></div><div class="item-price">3,500</div></div>
+    <div class="item"><div><div class="item-name">Raspberry</div><div class="item-kurdish">رازبێری</div></div><div class="item-price">3,500</div></div>
+    <div class="item"><div><div class="item-name">Passionfruit</div><div class="item-kurdish">پاشنفروت</div></div><div class="item-price">3,500</div></div>
+    <div class="item"><div><div class="item-name">Pineapple</div><div class="item-kurdish">ئەنەناس</div></div><div class="item-price">3,500</div></div>
+    <div class="item"><div><div class="item-name">Pear + Peach</div><div class="item-kurdish">هەرمێ و کۆخ</div></div><div class="item-price">3,500</div></div>
+    <div class="item"><div><div class="item-name">White Bride</div><div class="item-kurdish">وایت برایید</div></div><div class="item-price">3,500</div></div>
+  </section>
+
+  <footer>
+    <span class="cafe-name">AB Cafe</span>
+  </footer>
+
+</div>
+</body>
+</html>
